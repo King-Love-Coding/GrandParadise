@@ -1,0 +1,390 @@
+:root {
+    --primary-gold:#D4AF37;
+    --dark-gold: #A1864C;
+    --deep-navy: #121212;
+    --soft-gray: #F0F0F3;
+    --text-dark: #1B1B1B;
+    --text-light: #888888;
+    --rich-cream: #FFF9F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--rich-cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-gold) !important;
+    letter-spacing: 2px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6); 
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-gold) !important;
+    text-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Custom hamburger icon in luxury gold */
+.navbar-toggler-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23C6A664' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Optional: show a subtle shadow on icon tap */
+.navbar-toggler:focus .navbar-toggler-icon {
+    box-shadow: 0 0 8px rgba(198, 166, 100, 0.6);
+}
+
+
+
+
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://www.baltana.com/files/wallpapers-1/Beautiful-Luxury-Resort-Wallpaper-00895.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: #fff;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(198, 166, 100, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--dark-gold);
+    box-shadow: 0 7px 20px rgba(198, 166, 100, 0.5);
+}
+
+.booking-section {
+    background-color: var(--rich-cream);
+    padding: 5rem 0;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(198, 166, 100, 0.2);
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 0.15rem rgba(198, 166, 100, 0.25);
+}
+
+.services {
+    background-color: white;
+    padding: 5rem 0;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: var(--primary-gold);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    background-color: var(--soft-gray);
+    padding: 5rem 0;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 12px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.gallery-item span {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.newsletter {
+  background: linear-gradient(to right, #111, #1a1a1a);
+  color: white;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
+}
+
+.newsletter input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  box-shadow: none;
+}
+
+.newsletter input[type="email"]::placeholder {
+  color: #ccc;
+}
+
+.newsletter .btn-gold {
+  background-color: var(--primary-gold);
+  color: #111;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter .btn-gold:hover {
+  background-color: #bfa032;
+  color: #fff;
+}
+
+.text-gold {
+  color: var(--primary-gold);
+}
+
+.attraction-card img {
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.attraction-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* Sticky Floating Booking Button */
+.sticky-booking {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.sticky-booking .btn-gold {
+    background-color: var(--primary-gold);
+    color: #111;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 0.8rem 1.4rem;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sticky-booking .btn-gold:hover {
+    background-color: #fff;
+    color: var(--primary-gold);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Booking Modal Custom Styling */
+.booking-modal-content {
+    border-radius: 16px;
+    border: 2px solid var(--primary-gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+
+.testimonials {
+    background-color: var(--deep-navy);
+    color: #fff;
+    padding: 5rem 0;
+}
+
+.testimonial-card {
+    background-color: rgba(255,255,255,0.07);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-stars {
+    color: var(--primary-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: var(--deep-navy);
+    color: #fff;
+    padding: 3rem 0 1rem;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.6);
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--primary-gold);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .booking-card {
+        margin-top: 2rem;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-gold);
+}

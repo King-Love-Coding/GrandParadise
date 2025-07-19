@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE GRAND PARADISE - Experience Excellence</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">THE GRAND PARADISE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">SpecialOffers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Experience Luxury</h1>
+            <p>Where elegance meets comfort in the heart of the city</p>
+            <button class="btn btn-gold" onclick="scrollToSection('booking')">Book Your Stay</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://www.cvent.com/sites/default/files/image/2018-07/luxury-hotel.jpg" class="img-fluid rounded shadow" alt="Hotel Exterior">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-3" style="font-family: 'Playfair Display', serif; color: var(--deep-navy);">About The Grand Paradise</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.7;">
+                        Nestled in the heart of the city, The Grand Paradise redefines elegance and comfort. Our legacy of hospitality and modern luxury offers guests an unforgettable experience, whether you're here for business, leisure, or celebration.
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.7;">
+                        With breathtaking city views, award-winning restaurants, and a wellness sanctuary, we promise you more than just a stay — we promise you a memory.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--deep-navy);">Special Offers</h2>
+                    <p class="fade-in" style="font-size: 1.2rem; color: var(--text-light);">Exclusive packages tailored for your perfect escape</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="offer-card fade-in p-4 shadow rounded bg-light">
+                        <h5 style="color: var(--primary-gold);">Weekend Retreat</h5>
+                        <p>Book 2 nights and get the 3rd night free. Includes breakfast and spa access.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="offer-card fade-in p-4 shadow rounded bg-light">
+                        <h5 style="color: var(--primary-gold);">Romantic Escape</h5>
+                        <p>Enjoy a candlelight dinner, rose petal suite, and complimentary wine.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="offer-card fade-in p-4 shadow rounded bg-light">
+                        <h5 style="color: var(--primary-gold);">Family Fun</h5>
+                        <p>Special rates for family suites with kids’ activities and poolside fun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="booking-card">
+                        <h3 class="text-center mb-4" style="color: var(--deep-navy); font-family: 'Playfair Display', serif;">Reserve Your Room</h3>
+                        <form id="bookingForm">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Check-in Date</label>
+                                    <input type="date" class="form-control" id="checkin" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Check-out Date</label>
+                                    <input type="date" class="form-control" id="checkout" required>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label">Guests</label>
+                                    <select class="form-control" id="guests">
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label">Rooms</label>
+                                    <select class="form-control" id="rooms">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                        <option value="3">3 Rooms</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button type="submit" class="btn btn-gold w-100">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--deep-navy);">Our Services</h2>
+                    <p class="fade-in" style="font-size: 1.2rem; color: var(--text-light);">Discover world-class amenities designed for your comfort</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">Luxury Spa</h4>
+                        <p style="color: var(--text-light);">Rejuvenate your body and mind with our premium spa treatments and wellness therapies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">Fine Dining</h4>
+                        <p style="color: var(--text-light);">Experience culinary excellence with our award-winning restaurants and world-class chefs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-swimming-pool"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">Pool & Fitness</h4>
+                        <p style="color: var(--text-light);">Stay active with our state-of-the-art fitness center and stunning rooftop pool.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">24/7 Concierge</h4>
+                        <p style="color: var(--text-light);">Our dedicated concierge team is here to assist you with all your needs, anytime.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">High-Speed WiFi</h4>
+                        <p style="color: var(--text-light);">Stay connected with complimentary high-speed internet throughout the property.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4 style="color: var(--deep-navy); margin-bottom: 1rem;">Valet Parking</h4>
+                        <p style="color: var(--text-light);">Enjoy convenient and secure valet parking service for all our guests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--deep-navy);">Gallery</h2>
+                <p class="fade-in" style="font-size: 1.2rem; color: var(--text-light);">Explore our stunning spaces and luxurious accommodations</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://i.pinimg.com/736x/b1/5f/25/b15f257289f1d06d0e4dd4fc332de429.jpg'); background-size: cover; background-position: center;">
+                    <span>Presidential Suite</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://www.inspiringtravel.co.uk/other-shores/wp-content/uploads/2022/04/Miami-2-3.jpg'); background-size: cover; background-position: center;">
+                    <span>Rooftop Pool</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://images.stockcake.com/public/0/d/1/0d15604f-e503-4ca5-a4f4-4717348dc640_large/luxurious-spa-sanctuary-stockcake.jpg'); background-size: cover; background-position: center;">
+                    <span>Spa Sanctuary</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/01/06/2359/Grand-Hyatt-Mumbai-P605-Grand-Ballroom-Social-Cluster-Wedding.jpg/Grand-Hyatt-Mumbai-P605-Grand-Ballroom-Social-Cluster-Wedding.16x9.jpg?imwidth=1920'); background-size: cover; background-position: center;">
+                    <span>Grand Ballroom</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwcmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D'); background-size: cover; background-position: center;">
+                    <span>Fine Dining</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item fade-in" style="background-image: url('https://images.luxuryescapes.com/q_auto:best,dpr_2.0/irsjo9b9plntssjc21c'); background-size: cover; background-position: center;">
+                    <span>City Views</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- FAQ Section -->
+    <section id="faq" class="faq py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--deep-navy);">Frequently Asked Questions</h2>
+                    <p class="fade-in" style="font-size: 1.2rem; color: var(--text-light);">Have questions? We’re here to help!</p>
+                </div>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What time is check-in and check-out?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Check-in is from 2:00 PM and check-out is until 12:00 PM.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Do you offer airport transfers?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we provide airport pickup and drop-off upon request. Charges may apply.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Is parking available on site?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, complimentary valet parking is available for all guests.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3rem;">What Our Guests Say</h2>
+                    <p class="fade-in" style="font-size: 1.2rem; opacity: 0.8;">Hear from our satisfied guests about their exceptional experiences</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"An absolutely magnificent stay! The attention to detail and level of service exceeded all expectations. The spa treatments were divine."</p>
+                        <h5 style="color: var(--primary-gold); margin-top: 1rem;">Sarah Johnson</h5>
+                        <small style="opacity: 0.7;">Business Executive</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"The perfect blend of luxury and comfort. Every meal was a culinary masterpiece, and the staff went above and beyond to make our stay special."</p>
+                        <h5 style="color: var(--primary-gold); margin-top: 1rem;">Michael Chen</h5>
+                        <small style="opacity: 0.7;">Travel Blogger</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Our anniversary celebration was made unforgettable by the exceptional service and luxurious amenities. We'll definitely be returning!"</p>
+                        <h5 style="color: var(--primary-gold); margin-top: 1rem;">Emma & David</h5>
+                        <small style="opacity: 0.7;">Anniversary Guests</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+<section id="newsletter" class="newsletter bg-dark text-white py-5">
+  <div class="container text-center">
+    <h2 class="mb-3" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Subscribe to Our Newsletter</h2>
+    <p style="font-size: 1.1rem;">Get exclusive offers, luxury packages, and special event updates directly to your inbox.</p>
+    <form class="row justify-content-center mt-4">
+      <div class="col-md-6 mb-2">
+        <input type="email" class="form-control" placeholder="Enter your email address" required>
+      </div>
+      <div class="col-md-2 mb-2">
+        <button type="submit" class="btn btn-gold w-100">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">THE GRAND PARADISE</h4>
+                    <p style="opacity: 0.7; margin-top: 1rem;">Experience the pinnacle of hospitality in our luxury hotel, where every detail is crafted for your comfort and satisfaction.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 style="color: var(--primary-gold);">Contact Info</h5>
+                    <p style="opacity: 0.7;"><i class="fas fa-map-marker-alt" style="color: var(--primary-gold);"></i> 123 Luxury Avenue, City Center</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone" style="color: var(--primary-gold);"></i> +1 (555) 123-4567</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-envelope" style="color: var(--primary-gold);"></i> info@serenehotel.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 style="color: var(--primary-gold);">Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="footer-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-link me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-link me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0 1rem;">
+            <div class="text-center">
+                <p style="opacity: 0.5;">&copy; 2025 Serene Luxury Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Sticky Booking Button -->
+<div class="sticky-booking">
+  <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#bookingModal">
+    🛎️ Check Availability
+  </button>
+</div>
+
+<!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content booking-modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookingModalLabel">Reserve Your Stay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Check-in</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Check-out</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Guests</label>
+              <select class="form-control">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4+ Guests</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Rooms</label>
+              <select class="form-control">
+                <option>1 Room</option>
+                <option>2 Rooms</option>
+                <option>3+ Rooms</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
